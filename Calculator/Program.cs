@@ -27,19 +27,15 @@ namespace Calculator
                 while (operation < 1 || operation > 5)
                 {
                     Console.WriteLine("\nWarning: Select other valid option!\n");
-
                     Console.WriteLine("What operation do you want to do?");
                     Console.WriteLine("1 - Addition");
                     Console.WriteLine("2 - Subtraction");
                     Console.WriteLine("3 - Multiplication");
                     Console.WriteLine("4 - Division");
                     Console.WriteLine("5 - Exit \n");
-
                     operation = int.Parse(Console.ReadLine());
                 }
-
-                int result = 0;
-
+                Double result = 0;
                 switch (operation)
                 {
                     case 1:
@@ -62,8 +58,8 @@ namespace Calculator
                         }
                     case 4:
                         {
-                            result = Division(FirstNumber(), SecondNumber());
-                            PrintResult(result);
+                            result = 3;
+                            PrintResult(Division(FirstNumber(), SecondNumber()));
                             break;
                         }
                     case 5:
@@ -76,48 +72,40 @@ namespace Calculator
                   
         }
   
-
-        public static int Addition(int firstNumber, int secondNumber)
+        public static Double Addition(Double firstNumber, Double secondNumber)
         {
-           
-            int result = firstNumber + secondNumber;
-            return result;
+           return (firstNumber + secondNumber);
         }
-        public static int Subtraction(int firstNumber, int secondNumber)
+        public static Double Subtraction(Double firstNumber, Double secondNumber)
         {
-            int result = firstNumber - secondNumber;
-            return result;
+            return (firstNumber - secondNumber);
         }
-
-        public static int Multiplication(int firstNumber, int secondNumber)
+        public static Double Multiplication(Double firstNumber, Double secondNumber)
         {
-            int result = firstNumber * secondNumber;
-            return result;
+            return (firstNumber * secondNumber);
         }
-
-        public static int Division(int firstNumber, int secondNumber)
+        public static Double Division(Double firstNumber, Double secondNumber)
         {
             while(secondNumber == 0)
             {
                 Console.WriteLine("\nWarning: Do not exist division for zero!\n");
                 secondNumber = SecondNumber();
             }
-            int result = firstNumber / secondNumber;
-            return result;
+            return (firstNumber / secondNumber);
         }
-        public static int FirstNumber()
+        public static Double FirstNumber()
         {
             Console.WriteLine("Enter the first number: ");
-            int firstNumberInput = int.Parse(Console.ReadLine());
+            Double firstNumberInput = Double.Parse(Console.ReadLine());
             return firstNumberInput;
         }
-        public static int SecondNumber()
+        public static Double SecondNumber()
         {
             Console.WriteLine("Enter the second number: ");
-            int secondNumberInput = int.Parse(Console.ReadLine());
+            Double secondNumberInput = Double.Parse(Console.ReadLine());
             return secondNumberInput;
         }
-        public static void PrintResult(int result)
+        public static void PrintResult(Double result)
         {
             Console.WriteLine("\nThe operation result is: {0}\n", result);
         }
