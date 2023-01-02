@@ -75,7 +75,7 @@ namespace Calculator
         public static Double Addition(Double firstNumber, Double secondNumber)
         {
            return (firstNumber + secondNumber);
-        }
+        } 
         public static Double Subtraction(Double firstNumber, Double secondNumber)
         {
             return (firstNumber - secondNumber);
