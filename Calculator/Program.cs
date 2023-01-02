@@ -73,11 +73,9 @@ namespace Calculator
                         }
                 }
             }          
-           //aqui termina o main
-          
+                  
         }
-
-        //Functions
+  
 
         public static int Addition(int firstNumber, int secondNumber)
         {
