@@ -26,9 +26,23 @@ namespace Calculator
             int secondNumber = int.Parse(Console.ReadLine());
 
             int result;
-                     
+
+            switch (operation)
+            {
+                case 1:
+                    {
+                        result = Addition(firstNumber, secondNumber);
+                        break;
+                    }
+            }
+
 
         }
-              
+        public static int Addition(int firstNumber, int secondNumber)
+        {
+            int result = firstNumber + secondNumber;
+            return result;
+        }
+
     }
 }
