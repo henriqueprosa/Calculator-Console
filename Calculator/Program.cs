@@ -35,30 +35,27 @@ namespace Calculator
                     Console.WriteLine("5 - Exit \n");
                     operation = int.Parse(Console.ReadLine());
                 }
-                Double result = 0;
+                
                 switch (operation)
                 {
                     case 1:
                         {
-                            result = Addition(FirstNumber(), SecondNumber());
-                            PrintResult(result);
+                          
+                            PrintResult(Addition(FirstNumber(), SecondNumber()));
                             break;
                         }
                     case 2:
                         {
-                            result = Subtraction(FirstNumber(), SecondNumber());
-                            PrintResult(result);
+                            PrintResult(Subtraction(FirstNumber(), SecondNumber()));
                             break;
                         }
                     case 3:
                         {
-                            result = Multiplication(FirstNumber(), SecondNumber());
-                            PrintResult(result);
+                            PrintResult(Multiplication(FirstNumber(), SecondNumber()));
                             break;
                         }
                     case 4:
-                        {
-                            result = 3;
+                        {                            
                             PrintResult(Division(FirstNumber(), SecondNumber()));
                             break;
                         }
@@ -94,13 +91,13 @@ namespace Calculator
         }
         public static Double FirstNumber()
         {
-            Console.WriteLine("Enter the first number: ");
+            Console.WriteLine("\nEnter the first number: ");
             Double firstNumberInput = Double.Parse(Console.ReadLine());
             return firstNumberInput;
         }
         public static Double SecondNumber()
         {
-            Console.WriteLine("Enter the second number: ");
+            Console.WriteLine("\nEnter the second number: ");
             Double secondNumberInput = Double.Parse(Console.ReadLine());
             return secondNumberInput;
         }
