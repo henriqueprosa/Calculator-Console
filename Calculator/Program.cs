@@ -39,8 +39,7 @@ namespace Calculator
                 switch (operation)
                 {
                     case 1:
-                        {
-                          
+                        {                          
                             PrintResult(Addition(FirstNumber(), SecondNumber()));
                             break;
                         }
