@@ -70,8 +70,7 @@ namespace Calculator
                 }
             }          
                   
-        }
-  
+        }  
         public static Double Addition(Double firstNumber, Double secondNumber)
         {
            return (firstNumber + secondNumber);
@@ -109,6 +108,5 @@ namespace Calculator
         {
             Console.WriteLine("\nThe operation result is: {0}\n", result);
         }
-
     }
 }
